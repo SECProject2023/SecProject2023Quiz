@@ -1,0 +1,5 @@
+ public class Playerdetails {
+    
+    String name;
+    int points = 0;
+}
