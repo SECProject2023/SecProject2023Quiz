@@ -1,0 +1,104 @@
+public class Project{
+    static Playerdetails player1 = new Playerdetails(); // An object player1 is created
+    static Playerdetails player2 = new Playerdetails(); // An object player2 is created
+
+    //Here the menu is displayed for the user
+    public static void main (String args []){
+
+        int choice;
+        do{
+            System.out.println("1.Open Quiz\n2.HighestScore\n3.Exit");
+            System.out.println("Input your choice between 1,2 and 3:");
+
+            choice=Keyboard.readInt();
+
+            switch(choice){
+                case 1:openquiz();break;
+
+                case 2:highestscore();break;
+
+                case 3:System.out.println("You chose to exit.");break;
+
+                default:System.out.println("Invalid Input");break;
+            }
+        }
+        while (choice != 3);
+
+    }
+
+    //Here the highestsocre is displayed
+    public static void highestscore(){
+        System.out.println();
+        System.out.println("PLAYER NAME: " + player1.name + " \nSCORE: " + player1.points );
+
+        System.out.println();
+
+        System.out.println();
+        System.out.println("PLAYER NAME: " + player2.name + " \nSCORE: " + player2.points );
+
+        System.out.println();
+        //Here it displays the winner of the quiz between the 2 users
+        if(player1.points > player2.points) {
+            System.out.println(player1.name + " is the winner");
+        } else if(player2.points > player1.points) {
+            System.out.println(player2.name + " is the winner");
+        } else {
+            System.out.println("It's a tie");
+        }
+
+        System.out.println();
+
+    }
+
+    public static void openquiz(){
+        //User inputs the name for player 1
+        System.out.println();
+        System.out.println("Enter name for Player 1 ");
+        player1.name = Keyboard.readString();
+
+        System.out.println();
+
+        //Create Quiz for player 1
+        Questions QuizPlayer1 = new Questions();
+
+        for (int i = 0; i < 20; i++){
+            System.out.println(QuizPlayer1.Questions[i]);
+            System.out.println(QuizPlayer1.Ans_to_choose[i]);
+            QuizPlayer1.UserAns[i] = Keyboard.readInt();
+
+            if (QuizPlayer1.UserAns[i] == QuizPlayer1.ActualAns[i]){
+                System.out.println("Well Done");
+                player1.points = player1.points + 1;
+            }
+            else {
+                System.out.println("Incorrect. The Answer was: " + QuizPlayer1.ActualAns[i]);
+            }
+            System.out.println();
+        }
+
+        //User inputs the name for player 2
+        System.out.println();
+        System.out.println("Enter name for Player 2 ");
+        player2.name = Keyboard.readString();
+
+        System.out.println();
+
+        //Create Quiz for player 2
+        Questions QuizPlayer2 = new Questions();
+        for (int i = 0; i < 20; i++){
+            System.out.println(QuizPlayer2.Questions[i]);
+            System.out.println(QuizPlayer2.Ans_to_choose[i]);
+            QuizPlayer2.UserAns[i] = Keyboard.readInt();
+
+            if (QuizPlayer2.UserAns[i] == QuizPlayer2.ActualAns[i]){
+                System.out.println("Well Done");
+                player2.points = player2.points + 1;
+            }
+            else {
+                System.out.println("Incorrect. The Answer was: " + QuizPlayer2.ActualAns[i]);
+            }
+            System.out.println();
+        }
+
+    }
+}
