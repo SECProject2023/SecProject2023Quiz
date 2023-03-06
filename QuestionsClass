@@ -1,0 +1,93 @@
+ public class Questions {
+    
+    String [] Questions = new String[20];       // stores all the 20 Original Questions         **From 0 to 19** 
+    String [] Ans_to_choose = new String[20];   // stores all the 20 Answers to Choose          **From 0 to 19** 
+    int [] ActualAns = new int [20];            // Stores the 20 Right Answers                  **From 0 to 19** 
+    int [] UserAns = new int[20];               // stores all 20 user answers.                  **From 0 to 19** 
+    
+    //List of questions to be presented for the Quiz
+    Questions(){
+        
+        Questions[0] = "Q1 What is SLI?";
+        Ans_to_choose[0] = "1.Multiple Case fans\n2.Multiple GPU's\n3.Multiple PSU's\nInput your choice between 1 and 3:";
+        ActualAns[0] = 2;       
+                
+        Questions[1] = "Q2 What happens if you overclock your cpu to 8MHZ?";
+        Ans_to_choose[1] = "1.Your pc becomes on fire\n2.Your pc gets better cooling\n3.Your pc becomes faster\nInput your choice between 1 and 3:";
+        ActualAns[1] = 1;        
+                
+        Questions[2] = "Q3 Which of these is overkill when it comes to RAM";
+        Ans_to_choose[2] = "1.8Gb\n2.4Gb\n3.64Gb\nInput your choice between 1 and 3:";
+        ActualAns[2] = 3;        
+                
+        Questions[3] = "Q4 Which is the best GPU on the market?";
+        Ans_to_choose[3] = "1.RTX Nvidia 3090\n2.Asus ROG 3090\n3.Nvidia RTX 2080Ti\nInput your choice between 1 and 3:";
+        ActualAns[3] = 1;         
+                
+        Questions[4] = "Q5 Which is the best CPU on the market?";
+        Ans_to_choose[4] = "1.Intel Core I9 9th Generation\n2.AMD Ryzen 9 5900X\n3.Intel Core I3\nInput your choice between 1 and 3:";
+        ActualAns[4] = 2;  
+        
+        Questions[5] = "Q6 Which is the Motherboard on the market?";
+        Ans_to_choose[5] = "1.Z390\n2.X570\n3.B550-E\nInput your choice between 1 and 3:";
+        ActualAns[5] = 1; 
+                   
+        Questions[6] = "Q7 Which is the best cooling for your CPU";
+        Ans_to_choose[6] = "1.Water Cooling\n2.Liquid Cooling\n3.Fan Cooling\nInput your choice between 1 and 3:";
+        ActualAns[6] = 2;         
+                
+        Questions[7] = "Q8 Which company robs money from people when it comes to computers";
+        Ans_to_choose[7] = "1.MSI\n2.Apple\n3.Asus ROG\nInput your choice between 1 and 3:";
+        ActualAns[7] = 2;        
+                
+        Questions[8] = "Q9 A reasonable ammount of MHZ to overclock your PC?";
+        Ans_to_choose[8] = "1.2MHZ\n2.1.5MHZ\n3.3MHZ\nInput your choice between 1 and 3:";
+        ActualAns[8] = 2;         
+                
+        Questions[9] = "Q10 How do you clean your PC";
+        Ans_to_choose[9] = "1.Water\n2.Air Compressor\n3.Fire extinguisher\nInput your choice between 1 and 3:";
+        ActualAns[9] = 2;         
+                
+        Questions[10] = "Q11 Where do you put the thermalpaste?";
+        Ans_to_choose[10] = "1.On The CPU bay cover\n2.RAM Slots\n3.GPU Slots\nInput your choice between 1 and 3:";
+        ActualAns[10] = 1;         
+                
+        Questions[11] = "Q12 Where do you plug the monitor?";
+        Ans_to_choose[11] = "1.Motherboard Port\n2.GPU Port\n3.PSU Port\nInput your choice between 1 and 3:";
+        ActualAns[11] = 2;         
+                
+        Questions[12] = "Q13 What is the SSD which goes on your motherboard called?";
+        Ans_to_choose[12] = "1.SATA SSD\n2.PCIE SSD\n3.M.2 SSD\nInput your choice between 1 and 3:";
+        ActualAns[12] = 3;         
+                
+        Questions[13] = "Q14 Which of these do you have to remove to plug in the GPU?";
+        Ans_to_choose[13] = "1.PCI Cover\n2.PCI Slot\n3.Drive Bay\nInput your choice between 1 and 3:";
+        ActualAns[13] = 1;       
+                
+        Questions[14] = "Q15 Which is the most popular NZXT white case?";
+        Ans_to_choose[14] = "1.NZXT H501\n2.NZXT H500\n3.NZXT H700i\nInput your choice between 1 and 3:";
+        ActualAns[14] = 1;        
+                
+        Questions[15] = "Q16 Which one of these doesnt support RGB?";
+        Ans_to_choose[15] = "1.Cables\n2.CPU\n3.Storage\nInput your choice between 1 and 3:";
+        ActualAns[15] = 2;       
+                
+        Questions[16] = "Q17 Which is the most popular RAM Stick?";
+        Ans_to_choose[16] = "1.Corsair Dominator\n2.HyperX DDR4\n3.Corsair Vengeance\nInput your choice between 1 and 3:";
+        ActualAns[16] = 3;        
+                
+        Questions[17] = "Q18 Why is SLI a bad thing?";
+        Ans_to_choose[17] = "1.Most games doesn't support SLI\n2.Slows down PC performance\n3.Harms your CPU\nInput your choice between 1 and 3:";
+        ActualAns[17] = 1;        
+                
+        Questions[18] = "Q19 What is the purpose of thermal paste?";
+        Ans_to_choose[18] = "1.To stick the CPU cooling on the CPU\n2.Better performance\n3.less chance for the CPU to overheat\nInput your choice between 1 and 3:";
+        ActualAns[18] = 3;        
+                
+        Questions[19] = "Q20 How much megahertz does a Nvidia RTX 3090 have?";    
+        Ans_to_choose[19] = "1.1500HZ\n2.1395HZ\n3.1623HZ\nInput your choice between 1 and 3:";
+        ActualAns[19] = 1;
+        
+    }
+    
+}
